@@ -7,7 +7,7 @@
 
 <p id="display"></p>
 
-<button id="getcolors" onclick="colors()">click me</button>
+
 
 <script>
 	
@@ -17,20 +17,36 @@
 
 	var o = ["th", "st", "nd", "rd"];
 
-	var n = 0
+	var n;
 
-	function colors() {
+	var text = "";
+	var count = 1;
 
-		return document.getElementById("display").innerHTML = "1" + o[1] + " choice is " + color[0]
-	}
+	for (n = 0; n < color.length; n++) {
+		if(count <= 3){
+    text += count + o[count] + " choice is " + color[n] + "<br>";
+    count++
+    
+}
+
+         else{
+	text += count + o[0] + " choice is " + color[n] + "<br>";
+	count++
+	
+}
+}
+
+
+		
+
+		
+
+		document.getElementById("display").innerHTML = text
+
+	
 	
 
-console.log(color)
 
-console.log(o)
-
-console.log(n)
-	// document.getElementById("display").innerHTML = o;
 	
 
 
